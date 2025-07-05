@@ -1,50 +1,137 @@
-# Food-delivery-cost-analysis
-This project provides an in-depth analysis of food delivery data to uncover key insights and trends that can drive business decisions. By examining factors such as revenue, costs, profit, payment methods, and delivery times, we can better understand the dynamics of the food delivery industry.
+# Food Delivery Metrics Analysis and Visualization
+Download project report: [Food delivery analysis project report(pdf)](https://drive.google.com/file/d/1mdwWDPtIYGeTXTVqlNFbRNaL3u0IZN0R/view?usp=drive_link)
+Project Title:
+Food Delivery Metrics Analysis and Visualization
 
-Project Overview
-The analysis focuses on several critical aspects of food delivery operations:
+Prepared by:
+Mohammed Yusuf A
 
-Financial Overview: Calculation of total revenue, total cost, and total profit to assess the financial health of the business.
-Payment Method Analysis: Identification of the most popular payment methods to inform payment strategy decisions.
-Discount Impact: Evaluation of how discounts and offers influence order volumes.
-Delivery Time Analysis: Assessment of delivery times to ensure timely service and customer satisfaction.
-Top Performing Restaurants: Identification of top restaurants based on order value to highlight successful partners.
-Data Description
-The dataset includes the following key columns:
+Date:
+August 2024
 
-Order Date and Time: Timestamp for when the order was placed.
-Delivery Date and Time: Timestamp for when the order was delivered.
-Order Value: The monetary value of the order.
-Delivery Fee: Fee charged for delivery.
-Commission Fee: Fee charged by the platform to the restaurant.
-Payment Processing Fee: Fee for processing the payment.
-Refunds/Chargebacks: Costs incurred due to refunds or chargebacks.
-Payment Method: Method used by the customer to pay for the order.
-Discounts and Offers: Any discounts or offers applied to the order.
-Restaurant ID: Unique identifier for the restaurant.
-Tools and Technologies
-The project utilizes the following tools and libraries:
+1. Introduction:
+This project analyzes food delivery transaction data to derive actionable insights about revenue, costs, and operational performance. The objective was to clean, process, and visualize key metrics to understand business trends and profitability in online food delivery.
 
-Python: Primary programming language for data manipulation and analysis.
-Pandas: Library used for data manipulation and analysis.
-Matplotlib & Seaborn: Libraries for creating static, interactive, and animated visualizations in Python.
-Jupyter Notebook: Environment for running the analysis and visualizing results.
-Visualizations
-Several visualizations are created to present the data insights clearly:
+2. Dataset Overview:
+Source: Swiggy sample dataset used in WScube Masterclass
 
-Bar Plot of Financial Overview: Displays total revenue, total cost, and total profit.
-Pie Chart of Payment Methods: Shows the distribution of payment methods used by customers.
-Bar Plot of Order Volume by Discounts: Illustrates the number of orders for each discount type.
-Histogram of Delivery Times: Visualizes the distribution of delivery times to identify patterns.
-Bar Plot of Top Performing Restaurants: Highlights the restaurants with the highest total order values.
-Getting Started
-To reproduce the analysis, follow these steps:
+Records: 1,000 orders
 
-Clone the repository to your local machine.
-Ensure you have Python and the required libraries installed (pandas, matplotlib, seaborn).
-Run the Jupyter Notebook to execute the analysis and generate visualizations.
-Conclusion
-This project provides valuable insights into the food delivery industry, offering actionable data to improve operations and strategic decision-making. By analyzing financial metrics, delivery times, and customer preferences, businesses can optimize their services and enhance customer satisfaction.
+Columns Included:
+
+Order Value, Delivery Fee, Commission Fee, Payment Processing Fee, Refunds/Chargebacks, Discounts and Offers, Payment Method, Restaurant ID, Order Date and Time, Delivery Date and Time
+
+This dataset represents transactions processed by a food delivery platform.
+
+3. Tools and Technologies:
+Development Environment: Google Colab
+
+Programming Language: Python
+
+Libraries Used:
+
+Pandas (data manipulation)
+
+NumPy (numerical operations)
+
+Matplotlib (visualization)
+
+Seaborn (visualization)
+
+4. Data Cleaning and Preprocessing:
+Key cleaning steps performed:
+
+Converted date columns (Order Date and Time, Delivery Date and Time) from object to datetime format.
+
+Calculated additional fields:
+
+Total Revenue = Order Value + Delivery Fee
+
+Total Cost = Commission Fee + Payment Processing Fee + Refunds/Chargebacks
+
+Total Profit = Total Revenue - Total Cost
+
+Verified dataset integrity using .info() and .head() functions.
+
+This ensured the data was ready for accurate analysis.
+
+5. Exploratory Data Analysis:
+Initial exploration was performed to understand:
+
+Payment methods distribution
+
+Discounts applied
+
+Order values per restaurant
+
+Delivery times
+
+Data profiling revealed common discount types and highlighted Cash on Delivery as the dominant payment method.
+
+6. Metrics Calculation:
+The following metrics were calculated:
+
+Total Revenue: ₹1,082,589
+
+Total Cost: ₹185,122
+
+Total Profit: ₹897,467
+
+Most Popular Payment Method: Cash on Delivery
+
+Order Volume by Discount:
+
+10% Discount – 233 orders
+
+15% New User – 198 orders
+
+5% on App – 183 orders
+
+₹50 Off Promo – 201 orders
+
+Top 3 Restaurants by Order Value:
+
+R2726 – ₹6,794
+
+R2083 – ₹6,291
+
+R2933 – ₹6,049
+
+Average Delivery Time: Approx. 1 hour
+
+7. Data Visualization:
+Visualizations created to illustrate findings:
+
+Financial Overview (Bar Chart), Showed total revenue, cost, and profit, Payment Method Distribution (Pie Chart), Highlighted Cash on Delivery share, Order Volume by Discounts (Bar Chart), Compared discount types, Delivery Time Distribution (Histogram).
+
+Analyzed delivery time frequencies:
+
+Top Performing Restaurants (Bar Chart)
+
+Ranked restaurants by sales
+
+8. Insights and Interpretation:
+The platform generated substantial profit margins (approx. ₹900,000 over 1,000 orders).
+
+Cash on Delivery accounted for the majority of payments, indicating potential risk in payment collection.
+
+Discounts were widely used, especially the 10% and ₹50 Off promotions.
+
+Delivery times averaged around 1 hour, suggesting moderate operational efficiency.
+
+A small number of restaurants contributed disproportionately to revenue.
+
+These insights can help optimize marketing spend, payment options, and restaurant partnerships.
+
+9. Conclusion:
+This project demonstrated how Python-based analysis can reveal critical business insights from raw delivery data. Cleaning, processing, and visualizing 1,000 food delivery transactions provided a clear view of profitability drivers, operational patterns, and customer behaviors.
+
+10. References:
+WScube Masterclass: Food Delivery Cost Analysis
+
+Python official documentation
+
+Pandas, Matplotlib, and Seaborn guides
 
 Contact
 For questions or further information, please contact mdy717174@gmail.com
